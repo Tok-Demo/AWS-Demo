@@ -81,7 +81,7 @@ user: iam.{your_mail_name}@gmail.com
 
 
 
-### Setup for HTTPS users using Git credentials
+#### Setup for HTTPS users using Git credentials
 
 
 
@@ -103,7 +103,7 @@ Use SSH public keys to authenticate access to AWS CodeCommit repositories. [Lear
 
 
 
-### Connect to the CodeCommit console and clone the repository
+#### Connect to the CodeCommit console and clone the repository
 
 
 On your local machine, use a text editor to create a config file in the ~/.ssh directory, and then add the following lines to the file, where the value for User is the SSH key ID you copied earlier:
