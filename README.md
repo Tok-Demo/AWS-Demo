@@ -169,3 +169,13 @@ XXXXX== {user}@{client-host}
 
 ```
 
+#### Clone git to Workstation
+
+
+```bash
+git clone ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/shopping-cart-tok-demo
+
+git clone ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/{your_repo}
+
+```
+
