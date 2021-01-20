@@ -42,11 +42,124 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscl
 unzip awscliv2.zip
 sudo ./aws/install
 
+aws --version
+
 ```
 
 
 For a list of versions, see the AWS CLI version 2 changelog
-on GitHub. 
+on GitHub.
+
+
+Output:
+
+```bash
+aws-cli/2.0.30 Python/3.7.3 Linux/5.4.0-62-generic botocore/2.0.0dev34
+
+```
+
+
+## Create IAM User
+
+
+
+### Create My Policy
+
+
+
+### Create My Group
+
+Example:
+
+Group name: ProjectShoppingCart
+
+
+### Create IAM User
+
+
+user: iam.{your_mail_name}@gmail.com
+
+
+
+### Setup for HTTPS users using Git credentials
+
+
+
+### Create a CodeCommit repository
+
+
+
+#### Create New Repository
+
+
+
+
+#### Sign-in credentials
+
+
+SSH keys for AWS CodeCommit
+
+Use SSH public keys to authenticate access to AWS CodeCommit repositories. [Learn more](http://docs.aws.amazon.com/console/iam/about-ssh-keys) 
+
+
+
+### Connect to the CodeCommit console and clone the repository
+
+
+On your local machine, use a text editor to create a config file in the ~/.ssh directory, and then add the following lines to the file, where the value for User is the SSH key ID you copied earlier:
+
+[userguide](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ssh-unixes.html)
+
+
+
+```bash
+
+Host ssh://git-codecommit.*.amazonaws.com
+  User APKAEIBAERJR2EXAMPLE
+  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/codecommit_rsa
+
+# OR
+
+Host git-codecommit.*.amazonaws.com
+  User APKAEIBAERJR2EXAMPLE
+  IdentityFile ~/.ssh/codecommit_rsa
+
+
+```
+
+
+#### Add Permissions policies
+
+Add AWSCodeCommitFullAccess
+
+
+
+#### Test SSH Login
+
+
+```bash
+ssh -T  APKAEIBAERJR2EXAMPLE@git-codecommit.ap-southeast-1.amazonaws.com
+
+```
+
+Output:
+
+```bash
+You have successfully authenticated over SSH. You can use Git to interact with AWS CodeCommit. Interactive shells are not supported.Connection to git-codecommit.ap-southeast-1.amazonaws.com closed by remote host.
+
+```
+
+#### Add Remote CodeCommit Repo
+
+```bash
+ssh-rsa XXXXX== {user}@{client-host}
+
+```
+
+
+
+ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/shopping-cart-tok-demo
 
 
 
