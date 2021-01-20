@@ -111,27 +111,38 @@ On your local machine, use a text editor to create a config file in the ~/.ssh d
 [userguide](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-ssh-unixes.html)
 
 
+Update File:
 
 ```bash
+nano ~/.ssh/config
 
+```
+
+
+Add SSH config AWS Host
+
+
+```bash
+...
 Host ssh://git-codecommit.*.amazonaws.com
   User APKAEIBAERJR2EXAMPLE
   IdentityFile ~/.ssh/id_rsa
-  IdentityFile ~/.ssh/codecommit_rsa
 
 # OR
 
 Host git-codecommit.*.amazonaws.com
   User APKAEIBAERJR2EXAMPLE
-  IdentityFile ~/.ssh/codecommit_rsa
+  IdentityFile ~/.ssh/{codecommit_rsa}
 
 
 ```
 
 
-#### Add Permissions policies
+#### Add Permissions policies as a IAM User
 
-Add AWSCodeCommitFullAccess
+Add policies
+
+- AWSCodeCommitFullAccess
 
 
 
@@ -153,14 +164,8 @@ You have successfully authenticated over SSH. You can use Git to interact with A
 #### Add Remote CodeCommit Repo
 
 ```bash
-ssh-rsa XXXXX== {user}@{client-host}
+ssh-rsa XXXXX
+XXXXX== {user}@{client-host}
 
 ```
-
-
-
-ssh://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/shopping-cart-tok-demo
-
-
-
 
